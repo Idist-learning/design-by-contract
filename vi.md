@@ -1,35 +1,35 @@
 [Source](https://en.m.wikipedia.org/wiki/Design_by_contract "Permalink to Design by contract - Wikipedia")
 
-# Thiết kế theo contract - Wikipedia
+# Thiết kế theo hợp đồng (Hợp đồng thiết kế) - Wikipedia
 
 ! [] [1]
 
-Kế hoạch thiết kế theo contract
+Kế hoạch thiết kế theo hợp đồng
 
-Thiết kế theo  contract (DbC), còn được gọi là lập trình dạng contract, lập trình theo contract và lập trình được thiết kế theo hướng contract, là một cách tiếp cận việc thiết kế phần mềm. Nó quy định rằng các nhà thiết kế phần mềm nên xác định các đặc tả chính xác, chính xác và được đối với các thành phần phần mềm, mở rộng định nghĩa thông thường của các kiểu dữ liệu trừu tượng với điều kiện tiên quyết, hậu điều kiện và bất biến. Những thông số kỹ thuật này được gọi là "hợp đồng", phù hợp với một ẩn dụ khái niệm với các điều kiện và nghĩa vụ của hợp đồng kinh doanh.
+Thiết kế theo hợp đồng (DbC), còn được gọi là lập trình dạng hợp đồng, lập trình theo hợp đồng và lập trình được thiết kế theo hướng hợp đồng, là một cách tiếp cận việc thiết kế phần mềm. Nó quy định rằng các nhà thiết kế phần mềm nên xác định các đặc tả một cách chính xác, và được đối chiếu với các thành phần phần mềm, mở rộng định nghĩa thông thường của các kiểu dữ liệu trừu tượng với điều kiện tiên quyết, điều kiện phụ và bất biến. Những thông số kỹ thuật này được gọi là "hợp đồng", phù hợp với một khái niệm ẩn dụ cùng các điều kiện và nghĩa vụ của nghiệp vụ đối với hợp đồng đó.
 
-Cách tiếp cận DbC giả định tất cả các thành phần máy khách gọi một hoạt động trên một thành phần máy chủ sẽ đáp ứng các điều kiện tiên quyết được xác định theo yêu cầu cho hoạt động đó. Trường hợp giả định này được coi là quá rủi ro (như trong máy chủ đa kênh hoặc máy tính phân tán), phương pháp "thiết kế phòng thủ" đối diện được thực hiện, nghĩa là kiểm tra thành phần máy chủ (trước hoặc trong khi xử lý yêu cầu của khách hàng). đúng, và trả lời với một thông báo lỗi phù hợp nếu không.
+Cách tiếp cận DbC giả sử tất cả các thành phần máy khách gọi một hoạt động trên một thành phần máy chủ sẽ đáp ứng các điều kiện tiên quyết được xác định theo yêu cầu cho hoạt động đó. Trường hợp giả định này được coi là quá rủi ro (như trong máy chủ đa kênh hoặc máy tính phân tán), phương pháp "thiết kế hướng phòng thủ" theo hướng ngược lại được thực hiện, nghĩa là kiểm tra thành phần máy chủ (trước hoặc trong khi xử lý yêu cầu của khách hàng) luôn hoạt động, và trả lời với một thông báo lỗi phù hợp nếu không.
 
 ## Nội dung
 
 ### Lịch sử
 
-Thuật ngữ được đặt ra bởi Bertrand Meyer liên quan đến thiết kế của ông về ngôn ngữ lập trình Eiffel và được mô tả lần đầu trong các bài báo khác nhau bắt đầu từ năm 1986 [2] [3] và hai ấn bản liên tiếp (1988, 1997) Định hướng xây dựng phần mềm. Phần mềm Eiffel đã đăng ký nhãn hiệu cho Thiết kế theo Hợp đồng vào tháng 12 năm 2003 và được cấp vào tháng 12 năm 2004. [4] [5] Chủ sở hữu hiện tại của nhãn hiệu này là phần mềm Eiffel. [6] [7]
+Thuật ngữ được đặt ra bởi Bertrand Meyer, có liên quan đến thiết kế của ông về ngôn ngữ lập trình Eiffel và được mô tả lần đầu trong các bài báo khác nhau bắt đầu từ năm 1986 [2] [3] và hai ấn bản liên tiếp (1988, 1997) Object-Oriented Software Construction của ông ấy. Eiffel Software đã đăng ký nhãn hiệu cho Thiết kế theo hợp đồng vào tháng 12 năm 2003 và được cấp vào tháng 12 năm 2004. [4] [5] Chủ sở hữu hiện tại của nhãn hiệu này là Eiffel Software. [6] [7]
 
-Thiết kế theo hợp đồng có nguồn gốc của nó trong công việc xác minh chính thức, đặc điểm kỹ thuật chính thức và logic Hoare. Những đóng góp ban đầu bao gồm:
+Thiết kế theo hợp đồng có nguồn gốc của nó trong việc xác minh chính thức, đặc điểm kỹ thuật chính thức và logic của Hoare. Những đóng góp ban đầu bao gồm:
 
-* Một ẩn dụ rõ ràng để hướng dẫn quá trình thiết kế
-* Các ứng dụng để thừa kế, đặc biệt là một hình thức để định nghĩa lại và ràng buộc năng động
-* Ứng dụng xử lý ngoại lệ
-* Kết nối với tài liệu phần mềm tự động
+* Một ẩn dụ rõ ràng để hướng dẫn về quá trình thiết kế
+* Các ứng dụng được dùng để kế thừa, đặc biệt là để định nghĩa lại và ràng buộc có tính cơ động cao
+* Ứng dụng trong việc xử lý ngoại lệ
+* Kết nối với tài liệu của phần mềm một cách tự động
 
-### Sự miêu tả
+### Miêu tả
 
-Ý tưởng trung tâm của DbC là một phép ẩn dụ về cách các yếu tố của một hệ thống phần mềm cộng tác với nhau trên cơ sở các nghĩa vụ và lợi ích lẫn nhau. Ẩn dụ xuất phát từ cuộc sống kinh doanh, nơi "khách hàng" và "nhà cung cấp" đồng ý về "hợp đồng" xác định, ví dụ:
+Ý tưởng cốt lõi của DbC là một phép ẩn dụ về cách các yếu tố của một hệ thống phần mềm cộng tác với nhau trên cơ sở các nghĩa vụ và lợi ích lẫn nhau. Ẩn dụ xuất phát từ cuộc sống kinh doanh, nơi "khách hàng" và "nhà cung cấp" đồng ý về "hợp đồng" xác định, ví dụ:
 
-* Nhà cung cấp phải cung cấp một sản phẩm nhất định (nghĩa vụ) và có quyền mong đợi rằng khách hàng đã thanh toán phí (lợi ích) của mình.
-* Khách hàng phải trả phí (nghĩa vụ) và được quyền nhận sản phẩm (lợi ích).
-* Cả hai bên phải đáp ứng các nghĩa vụ nhất định, chẳng hạn như luật và quy định, áp dụng cho tất cả các hợp đồng.
+* Nhà cung cấp (có nghĩa vụ) phải cung cấp một sản phẩm nhất định và có quyền mong đợi rằng khách hàng đã thanh toán chi phí (lợi ích) cho mình.
+* Khách hàng (có nghĩa vụ) phải trả phí và được quyền nhận sản phẩm (lợi ích).
+* Cả hai bên phải đáp ứng các nghĩa vụ nhất định, chẳng hạn như luật và quy định, áp dụng cho tất cả các contract.
 
 Tương tự, nếu một thường trình từ một lớp trong lập trình hướng đối tượng cung cấp một chức năng nhất định, nó có thể:
 
@@ -37,7 +37,7 @@ Tương tự, nếu một thường trình từ một lớp trong lập trình h
 * Đảm bảo một tài sản nhất định về xuất cảnh: postcondition của thói quen - một nghĩa vụ cho nhà cung cấp, và rõ ràng là một lợi ích (lợi ích chính của việc gọi các thói quen) cho khách hàng.
 * Duy trì một tài sản nhất định, giả định về nhập cảnh và đảm bảo về lối ra: lớp bất biến.
 
-Hợp đồng này tương đương về mặt ngữ nghĩa với một cái ba của Hoare, hình thức hóa các nghĩa vụ. Điều này có thể được tóm tắt bằng "ba câu hỏi" mà nhà thiết kế phải nhiều lần trả lời trong hợp đồng:
+Hợp đồng này tương đương về mặt ngữ nghĩa với việc hình thức hóa các nghĩa vụ thành ba nguyên tắc của Hoare. Điều này có thể được tóm tắt bằng "ba câu hỏi" mà nhà thiết kế phải nhiều lần trả lời trong hợp đồng:
 
 * Hợp đồng kỳ vọng là gì?
 * Bảo đảm hợp đồng là gì?
